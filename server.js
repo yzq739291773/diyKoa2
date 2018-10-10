@@ -1,10 +1,25 @@
-const http = require('http')
+const DiyKoa = require('./application')
+const app = new DiyKoa()
 
-let server = http.createServer((req, res) => {
+app.use((req, res) => {
     res.writeHead(200)
-    res.end('hello yzq0')
+    res.end('hello yzq1')
 })
 
-server.listen(9092, () => {
-    console.log('serve11r start on port 9092')
+app.listen(9092, () => {
+    console.log('server start on port 9092')
 })
+
+
+
+// 原生node 起一个服务
+// const http = require('http')
+
+// let server = http.createServer((req, res) => {
+//     res.writeHead(200)
+//     res.end('hello yzq0')
+// })
+
+// server.listen(9092, () => {
+//     console.log('serve11r start on port 9092')
+// })
