@@ -58,7 +58,10 @@ class Application {
     }
     listen(...args) {
         const server = http.createServer(async(req, res) => {
-            // console.log(2222, res._body)
+            // console.log('1111111111111111111111111111111111111111')
+            // console.log('req', req)
+            // console.log('2222222222222222222222222222')
+            // console.log('res', res)
             let ctx = this.createCtx(req, res)
             const fn = this.compose(this.middlewares)
             await fn(ctx)
