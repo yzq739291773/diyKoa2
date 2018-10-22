@@ -7,6 +7,7 @@ const app = new DiyKoa()
 //         // res.writeHead(200)
 //         // res.end('hello yzq1')
 // })
+
 app.use(async(ctx, next) => {
     ctx.body = '1'
     await next()
